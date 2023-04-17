@@ -1,0 +1,335 @@
+
+.gallery {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  padding-top: 74px;
+  padding-bottom: 135px;
+}
+
+@include below(lg) {
+  .gallery {
+    padding-top: 48px;
+    padding-bottom: 125px;
+  }
+}
+
+@include below(md) {
+  .gallery {
+    padding-top: 21px;
+    padding-bottom: 45px;
+  }
+}
+
+.gallery-bg {
+  z-index: -1;
+  position: absolute;
+  background: url('../images/gallery-bg.jpg') no-repeat 50% 50%;
+  background-size: cover;
+  width: 1800px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 100%;
+  top: 0;
+  bottom: 0;
+}
+
+@include below(lg) {
+  .gallery-bg {
+    background-image: url('../images/gallery-bg-medium.jpg');
+  }
+}
+
+@include below(md) {
+  .gallery-bg {
+    background-image: url('../images/gallery-bg-small.jpg');
+  }
+}
+
+.gallery-bg__left {
+  content: '';
+  position: absolute;
+  display: block;
+  width: calc(50vw - 900px);
+  top: 0;
+  bottom: 0;
+  right: 100%;
+  background: url('../images/gallery-bg.jpg') repeat 0 50%;
+  background-size: cover;
+}
+
+.gallery-bg__left::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(5px);
+}
+
+.gallery-bg__left::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border-right: 24px solid rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+}
+
+.gallery-bg__right {
+  content: '';
+  position: absolute;
+  display: block;
+  width: calc(50vw - 900px);
+  top: 0;
+  bottom: 0;
+  left: 100%;
+  background: url('../images/gallery-bg.jpg') repeat 100% 50%;
+  background-size: cover;
+}
+
+.gallery-bg__right::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(5px);
+}
+
+.gallery-bg__right::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border-left: 24px solid rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+}
+
+.gallery__title {
+  font-size: 48px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #171717;
+  margin-bottom: 90px;
+  letter-spacing: 0.025em;
+}
+
+@include below(lg) {
+  .gallery__title {
+    font-size: 36px;
+    margin-bottom: 38px;
+  }
+}
+
+@include below(md) {
+  .gallery__title {
+    font-size: 24px;
+    margin-bottom: 22px;
+  }
+}
+
+.gallery__body {
+  margin-left: 65px;
+  margin-right: 65px;
+}
+
+@include below(lg) {
+  .gallery__body {
+    width: 555px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@include below(md) {
+  .gallery__body {
+    width: 280px;
+  }
+}
+
+.mySwiper.swiper {
+  width: 100%;
+  overflow: visible;
+}
+
+.mySwiper .swiper-slide {
+  box-sizing: border-box;
+  background-position: center;
+  background-size: cover;
+  width: 555px;
+  height: 555px;
+  border-width: 4px;
+  border-color: rgb(255, 255, 255);
+  border-style: solid;
+  background-color: rgb(0, 0, 0);
+  box-shadow: 7.757px 13.994px 17.85px 3.15px rgba(0, 2, 1, 0.46);
+  opacity: 0;
+  transition: opacity .5s ease;
+}
+
+@include below(xl) {
+  .mySwiper .swiper-slide {
+    width: 455px;
+    height: 455px;
+  }
+}
+
+@include below(lg) {
+  .mySwiper .swiper-slide {
+    width: 555px;
+    height: 555px;
+  }
+}
+
+@include below(md) {
+  .mySwiper .swiper-slide {
+    width: 280px;
+    height: 280px;
+    box-shadow: 3px 3px 8px rgba(0, 2, 1, 0.46);
+  }
+}
+
+.mySwiper .swiper-slide-visible {
+  opacity: 1;
+}
+
+.mySwiper .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mySwiper .swiper-button-next {
+  right: -70px;
+  color: #171717;
+  width: 48px;
+  height: 68px;
+  margin-top: -34px;
+}
+
+.mySwiper .swiper-button-next::before {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+  width: 48px;
+  height: 12px;
+  background: currentColor;
+  border-radius: 6px;
+  margin-top: 13px;
+}
+
+.mySwiper .swiper-button-next::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  width: 48px;
+  height: 12px;
+  background: currentColor;
+  border-radius: 6px;
+  margin-top: -13px;
+}
+
+@include below(md) {
+  .mySwiper .swiper-button-next {
+    right: 0;
+    color: #ffffff;
+    width: 40px;
+    height: 48px;
+    margin-top: -24px;
+    filter: drop-shadow(1px 1px 1px #000);
+  }
+
+  .mySwiper .swiper-button-next::before {
+    width: 32px;
+    height: 8px;
+    border-radius: 4px;
+    margin-top: 9px;
+  }
+
+  .mySwiper .swiper-button-next::after {
+    width: 32px;
+    height: 8px;
+    border-radius: 4px;
+    margin-top: -9px;
+  }
+}
+
+.mySwiper .swiper-button-prev {
+  left: -70px;
+  color: #171717;
+  width: 48px;
+  height: 68px;
+  margin-top: -34px;
+}
+
+.mySwiper .swiper-button-prev::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  width: 48px;
+  height: 12px;
+  background: currentColor;
+  border-radius: 6px;
+  margin-top: 13px;
+}
+
+.mySwiper .swiper-button-prev::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+  width: 48px;
+  height: 12px;
+  background: currentColor;
+  border-radius: 6px;
+  margin-top: -13px;
+}
+
+@include below(md) {
+  .mySwiper .swiper-button-prev {
+    left: 0;
+    color: #ffffff;
+    width: 40px;
+    height: 48px;
+    margin-top: -24px;
+    filter: drop-shadow(1px 1px 1px #000);
+  }
+
+  .mySwiper .swiper-button-prev::before {
+    width: 32px;
+    height: 8px;
+    border-radius: 4px;
+    margin-top: 9px;
+  }
+
+  .mySwiper .swiper-button-prev::after {
+    width: 32px;
+    height: 8px;
+    border-radius: 4px;
+    margin-top: -9px;
+  }
+}
