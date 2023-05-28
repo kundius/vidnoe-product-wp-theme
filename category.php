@@ -30,7 +30,7 @@ $query = new WP_Query($query_params);
 
       <section class="catalog-section">
         <div class="ui-container">
-          <div class="sections">
+          <div class="sections" style="margin-top: 0;">
             <div class="sections-item">
               <div class="sections-item__title"><?php single_cat_title() ?></div>
               <?php if ($query->have_posts()): ?>
