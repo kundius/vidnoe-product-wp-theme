@@ -67,5 +67,7 @@ $query = new WP_Query($query_params);
 
       <?php get_template_part('partials/footer')?>
     </div>
+
+    <?php wp_footer() ?>
   </body>
 </html>
