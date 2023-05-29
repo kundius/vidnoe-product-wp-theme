@@ -68,7 +68,7 @@
         <div class="footer-primary__layout-menu">
           <?php wp_nav_menu([
             'container' => false,
-            'theme_location' => 'menu-main',
+            'theme_location' => 'menu-footer',
             'menu_class' => 'footer-menu'
           ]) ?>
         </div>
