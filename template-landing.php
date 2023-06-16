@@ -161,7 +161,7 @@ Template Name: Лендинг
             </div>
           </div>
           <div class="principles__button">
-            <button class="ui-button-primary" data-scroll="#order"><?php echo $principles['button'] ?></button>
+            <button class="ui-button-primary" data-hystmodal="#order"><?php echo $principles['button'] ?></button>
           </div>
         </div>
         <div class="principles-bg">
@@ -199,7 +199,7 @@ Template Name: Лендинг
       <?php endif ?>
 
       <?php if ($order = get_field('order')): ?>
-      <section class="order" id="order">
+      <section class="order" id="cooperation">
         <div class="ui-container">
           <div class="order__title">
             <?php echo $order['title'] ?>
