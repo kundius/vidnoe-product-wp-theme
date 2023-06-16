@@ -35,7 +35,7 @@ Template Name: Лендинг
             </div>
           </div>
           <div class="intro__button">
-            <button class="ui-button-primary" data-scroll="#order">
+            <button class="ui-button-primary" data-hystmodal="#order">
               <?php echo $intro['button'] ?>
             </button>
           </div>
