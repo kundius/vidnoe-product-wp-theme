@@ -135,6 +135,8 @@ $child_cats = new WP_Query($child_cats_args);
             <?php wp_reset_postdata() ?>
           </div>
 
+          <br>
+
           <div>
             <?php the_content() ?>
           </div>
