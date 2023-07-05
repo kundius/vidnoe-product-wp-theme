@@ -134,6 +134,10 @@ $child_cats = new WP_Query($child_cats_args);
             <?php endwhile ?>
             <?php wp_reset_postdata() ?>
           </div>
+
+          <div>
+            <?php the_content() ?>
+          </div>
         </div>
       </section>
     
